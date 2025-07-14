@@ -1,15 +1,32 @@
-import "../styles/Card.css";
+import cardStyles from "../styles/Card.module.css";
+import { useContext } from "react";
+import { CartContext } from "./App";
 
 function Card(props) {
+  const { cart, setCart, addItem, getItemIndex, removeItem } =
+    useContext(CartContext);
+
   return (
-    <div className="card">
-      <div className="imageArea">
-        <img src={props.image} alt="" />
+    <div className={cardStyles.card}>
+      <div className={cardStyles.imageArea}>
+        <img src={props.product.image} alt="" />
       </div>
-      <div className="title">{props.title}</div>
-      <div className="bottomRow">
-        <div className="price">${props.price}</div>
-        <button>Add to cart</button>
+      <div className={cardStyles.title}>{props.product.title}</div>
+      <div className={cardStyles.bottomRow}>
+        <div className={cardStyles.price}>${props.product.price}</div>
+        <button
+          onClick={() => {
+            if (getItemIndex(props.product.id) === -1) {
+              addItem(props.product);
+            } else {
+              removeItem(props.product);
+            }
+          }}
+        >
+          {getItemIndex(props.product.id) === -1
+            ? "Add to cart"
+            : "Remove from cart"}
+        </button>
       </div>
     </div>
   );

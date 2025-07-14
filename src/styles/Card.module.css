@@ -25,9 +25,11 @@
   justify-content: center;
 }
 
-img {
-  max-height: 300px;
-  max-width: 100%;
+.card {
+  img {
+    max-height: 300px;
+    max-width: 100%;
+  }
 }
 
 .title {
@@ -49,16 +51,18 @@ img {
   font-weight: bold;
 }
 
-button {
-  font-size: 16px;
-  background-color: white;
-  padding: 5px 10px;
-  border: 2px black solid;
-  border-radius: 100px;
-  cursor: pointer;
-}
+.card {
+  button {
+    font-size: 16px;
+    background-color: white;
+    padding: 5px 10px;
+    border: 2px black solid;
+    border-radius: 100px;
+    cursor: pointer;
+  }
 
-button:hover {
-  background-color: black;
-  color: white;
+  button:hover {
+    background-color: black;
+    color: white;
+  }
 }
