@@ -1,0 +1,14 @@
+:root {
+  --grey: #e0e0e0;
+}
+
+.shop {
+  background-color: var(--grey);
+  padding: 40px 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}

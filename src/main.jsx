@@ -4,6 +4,7 @@ import Home from "./components/Home.jsx";
 import Shop from "./components/Shop.jsx";
 import About from "./components/About.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./styles/index.css";
 
 const router = createBrowserRouter([
   {
