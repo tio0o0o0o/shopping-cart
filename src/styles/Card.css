@@ -1,5 +1,6 @@
 :root {
   --shadow: rgba(0, 0, 0, 0.2);
+  --grey: #a8a8a8;
 }
 
 .card {
@@ -8,8 +9,13 @@
   width: 100%;
   border-radius: 24px;
   padding: 20px;
-  box-shadow: 2px 2px 4px var(--shadow);
+  border: 1px solid var(--grey);
   cursor: pointer;
+  box-shadow: 2px 2px 4px var(--shadow);
+}
+
+.card:hover {
+  box-shadow: 6px 6px 4px var(--shadow);
 }
 
 .imageArea {

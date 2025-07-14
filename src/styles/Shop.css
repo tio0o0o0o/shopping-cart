@@ -1,9 +1,4 @@
-:root {
-  --grey: #e0e0e0;
-}
-
 .shop {
-  background-color: var(--grey);
   padding: 40px 20px;
 }
 
