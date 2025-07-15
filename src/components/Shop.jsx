@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Card from "./Card.jsx";
 import shopStyles from "../styles/Shop.module.css";
 
+//WARNING: Data is fetched every time the shop page is loaded. Move the data fetching to the App component
 function useGetProducts() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -31,7 +32,7 @@ function Shop() {
     <div className={shopStyles.shop}>
       <div className={shopStyles.cards}>
         {products.map((product) => {
-          return <Card product={product} />;
+          return <Card product={product} key={product.id} />;
         })}
       </div>
     </div>

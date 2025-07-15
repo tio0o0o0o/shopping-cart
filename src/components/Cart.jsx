@@ -20,7 +20,7 @@ function Cart() {
     <div className={cartStyles.cart}>
       <div className={cartStyles.items}>
         {cart.map((product) => {
-          return <CartItem product={product} />;
+          return <CartItem product={product} key={product.product.id} />;
         })}
       </div>
       <div className={cartStyles.order}>
